@@ -84,53 +84,10 @@ export default function RootLayout({
                 transition={{ duration: 0.3, delay: 0.2 }}
                 className="flex flex-col items-center justify-center h-full space-y-8 text-white"
               >
-                <Link 
-                  href="/services" 
-                  className="text-6xl md:text-7xl font-medium hover:opacity-70 transition-opacity cursor-none flex items-center gap-6"
-                  onClick={() => setIsMenuOpen(false)}
-                  style={{ fontFamily: 'Articulat CF, sans-serif' }}
-                >
-                  <Image
-                    src="/logowwhite.png"
-                    alt="Logo"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                  Services
-                </Link>
-                <Link 
-                  href="/case-studies" 
-                  className="text-6xl md:text-7xl font-medium hover:opacity-70 transition-opacity cursor-none flex items-center gap-6"
-                  onClick={() => setIsMenuOpen(false)}
-                  style={{ fontFamily: 'Articulat CF, sans-serif' }}
-                >
-                  <Image
-                    src="/logowwhite.png"
-                    alt="Logo"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                  Case Studies
-                </Link>
-                <Link 
-                  href="/blog" 
-                  className="text-6xl md:text-7xl font-medium hover:opacity-70 transition-opacity cursor-none flex items-center gap-6"
-                  onClick={() => setIsMenuOpen(false)}
-                  style={{ fontFamily: 'Articulat CF, sans-serif' }}
-                >
-                  <Image
-                    src="/logowwhite.png"
-                    alt="Logo"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                  Blog
-                </Link>
-                <Link 
-                  href="/contact" 
+                <a 
+                  href="https://cal.com/thebluio" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-6xl md:text-7xl font-medium hover:opacity-70 transition-opacity cursor-none flex items-center gap-6"
                   onClick={() => setIsMenuOpen(false)}
                   style={{ fontFamily: 'Articulat CF, sans-serif' }}
@@ -143,7 +100,7 @@ export default function RootLayout({
                     className="w-12 h-12"
                   />
                   Contact
-                </Link>
+                </a>
               </motion.div>
             </motion.div>
           )}

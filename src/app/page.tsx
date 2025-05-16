@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Spline from '@splinetool/react-spline';
+import { GlassButton } from '@/components/ui/glass-button';
 
 export default function Home() {
   return (
@@ -14,12 +15,15 @@ export default function Home() {
         <h1 className="text-8xl md:text-8xl font-medium mb-12 text-white" style={{ fontFamily: 'Articulat CF, sans-serif' }}>
           Launch <br></br>and <br></br>Grow
         </h1>
-        <Link 
-          href="/contact"
-          className="inline-flex items-center justify-center px-8 py-4 rounded-full text-lg font-medium text-white bg-black hover:bg-black/90 transition-colors"
+        <a 
+          href="https://cal.com/thebluio"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Get in touch
-        </Link>
+          <GlassButton style={{ fontFamily: 'Articulat CF, sans-serif' }}>
+            Get in touch
+          </GlassButton>
+        </a>
       </section>
     </main>
   );
