@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 const CustomCursor = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isClient, setIsClient] = useState(false);
-  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -29,11 +28,9 @@ const CustomCursor = () => {
       
       const handleMouseEnter = () => {
         scale = 1.5;
-        setIsHovering(true);
       };
       const handleMouseLeave = () => {
         scale = 1;
-        setIsHovering(false);
       };
 
       interactiveElements.forEach(element => {

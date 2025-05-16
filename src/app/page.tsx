@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Spline from '@splinetool/react-spline';
 import { GlassButton } from '@/components/ui/glass-button';
 
