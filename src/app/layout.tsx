@@ -120,9 +120,16 @@ export default function RootLayout({
                   Contact
                 </a>
                 <Link
-                  href="/"
+                  href="/#works"
                   className="text-6xl md:text-7xl font-medium hover:opacity-70 transition-opacity cursor-none flex items-center gap-6 text-white"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={e => {
+                    setIsMenuOpen(false);
+                    if (window.location.pathname === "/") {
+                      e.preventDefault();
+                      window.location.hash = "#works";
+                      window.dispatchEvent(new Event("goToWorks"));
+                    }
+                  }}
                   style={{ fontFamily: 'Articulat CF, sans-serif' }}
                 >
                   <Image

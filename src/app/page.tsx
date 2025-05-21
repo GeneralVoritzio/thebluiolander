@@ -149,6 +149,13 @@ export default function Home() {
     };
   }, [section]);
 
+  // Listen for custom 'goToWorks' event
+  useEffect(() => {
+    const goToWorks = () => setSection(1);
+    window.addEventListener('goToWorks', goToWorks);
+    return () => window.removeEventListener('goToWorks', goToWorks);
+  }, []);
+
   return (
     <div ref={containerRef} className="relative w-screen h-screen overflow-hidden">
       <AnimatePresence initial={false} mode="wait">
@@ -193,7 +200,7 @@ export default function Home() {
               <h1 className="text-8xl md:text-9xl font-light mb-12 text-white text-center" style={{ fontFamily: 'Articulat CF, sans-serif' }}>
                 Stand out <br />
                 in the <br />
-                <span className="bg-white text-black rounded-full px-6 py-2 inline-block">madness</span>
+                <span className="bg-white text-black rounded-full px-2 py-2 inline-block">madness</span>
               </h1>
               <a
                 href="https://cal.com/thebluio"
