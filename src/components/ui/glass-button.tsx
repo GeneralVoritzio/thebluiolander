@@ -4,28 +4,36 @@ import { cn } from "@/lib/utils";
 interface GlassButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   children?: React.ReactNode;
+  variant?: "white" | "black";
 }
 
 const GlassButton = React.forwardRef<HTMLButtonElement, GlassButtonProps>(
-  ({ className, children, ...props }, ref) => {
+  ({ className, children, variant, ...props }, ref) => {
+    let variantClasses = "";
+    if (variant === "white") {
+      variantClasses = cn(
+        "bg-white text-black border border-black",
+        "hover:bg-black hover:text-white hover:border-white",
+        "active:bg-neutral-200"
+      );
+    } else if (variant === "black") {
+      variantClasses = cn(
+        "bg-black text-white",
+        "hover:bg-white hover:text-black hover:border-black",
+        "active:bg-neutral-900"
+      );
+    } else {
+      variantClasses = cn(
+        "bg-none border border-white/10 text-white",
+        "hover:bg-white/15 hover:border-white/30 hover:scale-[1.02]",
+        "active:scale-[0.98]"
+      );
+    }
     return (
       <button
         className={cn(
-          "relative group",
-          "px-8 py-4 rounded-full",
-          "bg-none",
-          "border border-white/10",
-          "transition-all duration-300",
-          // Text
-          "text-white text-lg font-medium",
-          // Hover effects
-          "hover:bg-white/15 hover:border-white/30 hover:scale-[1.02]",
-          // Active effects
-          "active:scale-[0.98]",
-          // Glass reflection
-          "before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-b before:from-white/20 before:to-transparent",
-          // Bottom blur
-          "after:absolute after:inset-x-0 after:bottom-0 after:h-1/2 after:rounded-b-full after:bg-gradient-to-t after:from-white/10 after:to-transparent",
+          "relative group px-8 py-4 rounded-full transition-all duration-300 text-lg font-medium",
+          variantClasses,
           className
         )}
         ref={ref}
