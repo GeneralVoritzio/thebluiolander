@@ -200,7 +200,7 @@ export default function Home() {
               <h1 className="text-8xl md:text-9xl font-light mb-12 text-white text-center" style={{ fontFamily: 'Articulat CF, sans-serif' }}>
                 Stand out <br />
                 in the <br />
-                <span className="bg-white text-black rounded-full px-2 py-2 inline-block">madness</span>
+                <span className="bg-white text-black rounded-full lg:px-6 px-2 py-2 inline-block">madness</span>
               </h1>
               <a
                 href="https://cal.com/thebluio"
