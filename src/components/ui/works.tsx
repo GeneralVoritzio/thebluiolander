@@ -101,10 +101,10 @@ export default function Works() {
       </div>
       {/* Overlayed centered text area */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
-        <div className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-foreground dark:text-muted w-full text-center" style={{ fontFamily: 'Articulat CF, sans-serif' }}>
+        <div className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl text-foreground dark:text-muted w-full text-center" style={{ fontFamily: 'Articulat CF, sans-serif' }}>
           Our Works
         </div>
-        <p className="mt-2 text-sm sm:text-base md:text-xl lg:text-2xl text-foreground dark:text-muted w-full text-center" style={{ fontFamily: 'Articulat CF, sans-serif' }}>
+        <p className="mt-2 text-xl sm:text-base md:text-xl lg:text-2xl text-foreground dark:text-muted w-full text-center" style={{ fontFamily: 'Articulat CF, sans-serif' }}>
           COMING SOON
         </p>
       </div>
